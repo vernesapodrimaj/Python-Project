@@ -5,7 +5,7 @@ Supplement Sales analysis with Python
  Exploratory data analysis on supplement sales. Includes data inspection, cleaning, and
 initial business insights based on weekly product-level transactions.
 
-python
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
