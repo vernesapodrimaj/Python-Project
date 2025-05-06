@@ -5,10 +5,12 @@ Supplement Sales analysis with Python
  Exploratory data analysis on supplement sales. Includes data inspection, cleaning, and
 initial business insights based on weekly product-level transactions.
 
-\nimport numpy as np
-\nimport pandas as pd
-\nimport matplotlib.pyplot as plt
-\nimport seaborn as sns
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns ```
+
 
 ## Load dataset
 file_path = "/Users/vernesapodrimaj/Downloads/Supplement_Sales_Weekly_Expanded.csv"
