@@ -3,13 +3,13 @@ Supplement Sales analysis with Python
 
 # Supplement Sales Weekly Analysis with Python 📊
  Exploratory data analysis on supplement sales. Includes data inspection, cleaning, and
-initial business insights based on weekly product-level transactions.
+initial business insights based on weekly product-level transactions.  
 
 
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+import numpy as np  
+import pandas as pd  
+import matplotlib.pyplot as plt  
+import seaborn as sns  
 
 
 ## Load dataset
