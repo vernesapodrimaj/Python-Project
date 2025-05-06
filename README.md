@@ -1,21 +1,54 @@
 # Python-Project
-Supplement Sales analysis with Python
+Supplement Sales analysis with Python  
+
+This project explores and analyzes weekly supplement sales data using Python and Pandas. It's part of a portfolio aimed at showcasing practical data analysis skills, including data cleaning, feature engineering, and exploratory insights generation.
+
+## 📂 Project Structure
+
+- `supplement_sales.ipynb`: Main script for loading and preprocessing the sales dataset.
+- `README.md`: Documentation and project overview.
+
+## 📊 Dataset Overview
+
+- **Source**: kaggle dataset
+- **Frequency**: Weekly (Mondays only)
+- **Columns**:
+  - `Date`, `Product Name`, `Category`, `Units Sold`, `Price`, `Revenue`, `Discount`, `Units Returned`, `Location`, `Platform`
+
+## 🛠 Features & Processing
+
+- Parses `Date` into datetime
+- Adds `Year` and `DayOfWeek` columns for temporal analysis
+- Provides summary statistics for revenue, sales, and returns
+- Prepares the dataset for further exploration (e.g., trend analysis, seasonality, discount impact)
+
+## 🔍 Key Insights (from example results)
+
+- **Top Categories by Revenue**: Vitamin, Mineral, Performance
+- **Top Products by Revenue**: Biotin, Zinc, Pre-Workout
+- **Price and Revenue Correlation**: Strong positive correlation between price and revenue
+- **Units Returned**: Generally low, but slight correlation with units sold
+
+## 💡 Potential Extensions
+
+- Create visualizations (bar charts, line plots, heatmaps)
+- Analyze trends over time
+- Study the effect of discounts on revenue and returns
+- Build a dashboard using tools like Tableau or Power BI
+
 
 # Supplement Sales Weekly Analysis with Python 📊
  Exploratory data analysis on supplement sales. Includes data inspection, cleaning, and
 initial business insights based on weekly product-level transactions.  
-
 
 import numpy as np  
 import pandas as pd  
 import matplotlib.pyplot as plt  
 import seaborn as sns  
 
-
 ## Loaded dataset
 file_path = "/Users/vernesapodrimaj/Downloads/Supplement_Sales_Weekly_Expanded.csv"
 supplement_sales = pd.read_csv(file_path)
-
 
 ## Data Exploration
 
