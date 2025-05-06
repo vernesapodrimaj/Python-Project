@@ -15,7 +15,7 @@ This project explores and analyzes weekly supplement sales data using Python and
 - **Columns**:
   - `Date`, `Product Name`, `Category`, `Units Sold`, `Price`, `Revenue`, `Discount`, `Units Returned`, `Location`, `Platform`
 
-## 🛠 Features & Processing
+## Features & Processing
 
 - Parses `Date` into datetime
 - Adds `Year` and `DayOfWeek` columns for temporal analysis
