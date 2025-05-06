@@ -14,9 +14,9 @@ import seaborn as sns
 file_path = "/Users/vernesapodrimaj/Downloads/Supplement_Sales_Weekly_Expanded.csv"
 supplement_sales = pd.read_csv(file_path)
 
-# ----------------------------
-## Basic Exploration
-# ----------------------------
+
+## Data Exploration
+
 print("Dataset shape:", supplement_sales.shape)
 print("\nFirst 5 rows:")
 print(supplement_sales.head())
@@ -33,9 +33,8 @@ print("Total missing values:", supplement_sales.isnull().sum().sum())
 print("\nUnique locations:")
 print(supplement_sales['Location'].unique())
 
-# ----------------------------
+
 ## Category Analysis
-# ----------------------------
 print("\nTop categories by count:")
 category_counts = supplement_sales['Category'].value_counts()
 print(category_counts)
@@ -44,16 +43,14 @@ print("\nMost common product:")
 product_counts = supplement_sales['Product Name'].value_counts()
 print(product_counts)
 
-# ----------------------------
+
 ## Add Time Features
-# ----------------------------
 supplement_sales['Date'] = pd.to_datetime(supplement_sales['Date'])
 supplement_sales['Year'] = supplement_sales['Date'].dt.year
 supplement_sales['DayOfWeek'] = supplement_sales['Date'].dt.day_name()
 
-# ----------------------------
+
 ## Sample Slice for GitHub Display
-# ----------------------------
 sample_data = supplement_sales.iloc[20:41]
 print("\nSample data slice (rows 20–40):")
 print(sample_data)
