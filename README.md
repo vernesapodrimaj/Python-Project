@@ -57,9 +57,7 @@ sample_data = supplement_sales.iloc[20:41]
 print("\nSample data slice (rows 20–40):")
 print(sample_data)
 
-# ----------------------------
-## Basic Visualizations
-# ----------------------------
+
 
 # Category distribution
 plt.figure(figsize=(10, 6))
@@ -78,9 +76,8 @@ plt.tight_layout()
 plt.savefig("price_vs_revenue.png")
 plt.show()
 
-# ----------------------------
+
 ## Correlation Matrix
-# ----------------------------
 corr = supplement_sales[['Units Sold', 'Revenue', 'Discount', 'Units Returned', 'Price']].corr()
 print("\nCorrelation matrix:")
 print(corr)
@@ -108,8 +105,6 @@ plt.tight_layout()
 plt.show()
 
 ## Heatmap: Units Sold by Location and Category
-
-## Create a pivot table to summarize units sold by location and category
 heatmap_data = supplement_sales.pivot_table(
     values='Units Sold',
     index='Location',
