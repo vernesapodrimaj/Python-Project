@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns  
 
 
-## Load dataset
+## Loaded dataset
 file_path = "/Users/vernesapodrimaj/Downloads/Supplement_Sales_Weekly_Expanded.csv"
 supplement_sales = pd.read_csv(file_path)
 
@@ -46,13 +46,13 @@ product_counts = supplement_sales['Product Name'].value_counts()
 print(product_counts)
 
 
-## Add Time Features
+## Time Features
 supplement_sales['Date'] = pd.to_datetime(supplement_sales['Date'])
 supplement_sales['Year'] = supplement_sales['Date'].dt.year
 supplement_sales['DayOfWeek'] = supplement_sales['Date'].dt.day_name()
 
 
-## Sample Slice for GitHub Display
+## Sample Slice 
 sample_data = supplement_sales.iloc[20:41]
 print("\nSample data slice (rows 20–40):")
 print(sample_data)
@@ -89,12 +89,12 @@ plt.tight_layout()
 plt.savefig("correlation_matrix.png")
 plt.show()
 
-## Check the total number of units returned across all records
+## Total number of units returned across all records
 total_units_returned = supplement_sales["Units Returned"].sum()
 print("Total Units Returned:", total_units_returned)
 
 
-## Barplot: Visualize average price by product
+## Barplot: Average price by product
 plt.figure(figsize=(12, 6))
 sns.barplot(x='Product Name', y='Price', data=supplement_sales)
 plt.title('Average Price per Product')
@@ -150,23 +150,23 @@ plt.show()
 ## Create a new column for the name of the day of the week
 supplement_sales['Day of Week Name'] = supplement_sales['Date'].dt.day_name()
 
-## Create a categorical type to ensure correct weekday order
+## Creating a categorical type to ensure correct weekday order
 supplement_sales['Day of Week Name'] = pd.Categorical(
     supplement_sales['Day of Week Name'],
     categories=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
     ordered=True
 )
 
-## Group by Day of Week and Product Name to get total units sold
+## Grouping by Day of Week and Product Name to get total units sold
 day_product_sales = supplement_sales.groupby(['Day of Week Name', 'Product Name'])['Units Sold'].sum().reset_index()
 
-## Sort results by day of week for consistency
+## Sorting results by day of week for consistency
 day_product_sales = day_product_sales.sort_values('Day of Week Name')
 
-## Display the grouped data
+## Displaying the grouped data
 print(day_product_sales.head(15))  # Show the top 15 for preview
 
-# Final Preview: Dataset with newly added columns
+# Preview: Dataset with newly added columns
 
 # Confirm 'Day of Week Name' and 'Year' were added correctly
 supplement_sales[['Date', 'Product Name', 'Units Sold', 'Day of Week Name', 'Year']].head(10)
