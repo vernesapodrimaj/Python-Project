@@ -156,15 +156,6 @@ plt.title('Units Sold by Platform')
 plt.tight_layout()
 plt.show()
 
-# Reusable loader
-def load_and_process_sales(filepath):
-    return (
-        pd.read_csv(filepath, parse_dates=['Date'])
-          .assign(
-              Year=lambda df: df['Date'].dt.year,
-              DayOfWeek=lambda df: df['Date'].dt.day_name()
-          )
-    )
 
 
 # Load cleaned data
