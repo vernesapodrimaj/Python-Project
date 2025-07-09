@@ -3,7 +3,7 @@ Supplement Sales analysis with Python
 
 This project explores and analyzes weekly supplement sales data using Python and Pandas. It's part of a portfolio aimed at showcasing practical data analysis skills, including data cleaning, feature engineering, and exploratory insights generation.
 
-## 📂 Project Structure
+## Project Structure
 
 - `supplement_sales.ipynb`: Main script for loading and preprocessing the sales dataset.
 - `README.md`: Documentation and project overview.
@@ -22,14 +22,14 @@ This project explores and analyzes weekly supplement sales data using Python and
 - Provides summary statistics for revenue, sales, and returns
 - Prepares the dataset for further exploration (e.g., trend analysis, seasonality, discount impact)
 
-## 🔍 Key Insights (from example results)
+## Key Insights 
 
 - **Top Categories by Revenue**: Vitamin, Mineral, Performance
 - **Top Products by Revenue**: Biotin, Zinc, Pre-Workout
 - **Price and Revenue Correlation**: Strong positive correlation between price and revenue
 - **Units Returned**: Generally low, but slight correlation with units sold
 
-## 💡 Potential Extensions
+## Potential Extensions
 
 - Create visualizations (bar charts, line plots, heatmaps)
 - Analyze trends over time
@@ -90,8 +90,6 @@ sample_data = supplement_sales.iloc[20:41]
 print("\nSample data slice (rows 20–40):")
 print(sample_data)
 
-
-
 # Category distribution
 plt.figure(figsize=(10, 6))
 sns.countplot(data=supplement_sales, y='Category', order=category_counts.index)
@@ -108,7 +106,6 @@ plt.title("Price vs. Revenue by Category")
 plt.tight_layout()
 plt.savefig("price_vs_revenue.png")
 plt.show()
-
 
 ## Correlation Matrix
 corr = supplement_sales[['Units Sold', 'Revenue', 'Discount', 'Units Returned', 'Price']].corr()
@@ -153,7 +150,6 @@ plt.xlabel('Category')
 plt.ylabel('Location')
 plt.tight_layout()
 plt.show()
-
 
 ## Lineplot: Units Sold by Platform Over the Years
 
